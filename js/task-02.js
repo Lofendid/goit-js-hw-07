@@ -27,3 +27,18 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const gallery = document.querySelector('.gallery');
+const markup = images.forEach(image => {
+
+  const img = document.createElement('img');
+  img.setAttribute('src', image.url);
+  img.setAttribute('alt', image.alt);
+  img.classList.add('image')
+
+  const listItem = document.createElement('li')
+  listItem.classList.add('gallery-item');
+  listItem.append(img)
+  gallery.append(listItem);
+});
+
