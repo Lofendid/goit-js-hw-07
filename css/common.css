@@ -8,11 +8,21 @@
 
 /* Reset styles */
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 16px;
@@ -132,13 +142,19 @@ img {
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: 0.04em;
+    text-align: center;
 }
 
 #name-input {
+  display: flex;
+  align-self: center;
   min-width: 360px;
   padding: 8px 16px 8px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 16px;
   margin-bottom: 16px;
+  text-align: center;
   color: #2E2F42;
   border-radius: 4px;
   border: 0.1em solid #808080;
@@ -156,6 +172,13 @@ img {
 }
 
 /* Task 4 styles */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .login-form input {
   min-width: 360px;
@@ -211,4 +234,92 @@ img {
 }
 
 /* Task 5 styles */
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.widget p {
+  margin-top: 16px;
+}
+
+.widget .change-color {
+  padding: 8px 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  background: #4E75FF;
+  border: none;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
 /* Task 6 styles */
+
+#controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  max-width: 60vw;
+  padding: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  background-color: #F6F6FE;
+}
+
+#boxes {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 60vw;
+  padding: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  background-color: #F6F6FE;
+}
+
+#controls input:nth-child(1) {
+    padding: 8px 72px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #808080;
+    text-align: center;
+    outline: transparent;
+}
+
+#controls button:nth-child(2) {
+    padding: 8px 16px;
+      border-radius: 8px;
+      background: #4E75FF;
+      border: none;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+}
+
+#controls button:nth-child(3) {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #FF4E4E;
+  border: none;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
