@@ -4,10 +4,15 @@ const userPassword = document.querySelector('input[name="password"]');
 
 const handleSubmit = event => { 
     event.preventDefault();
+    const user = {};
     const trimmedEmail = userEmail.value.trim();
     const trimmedPassword = userPassword.value.trim();
     if (trimmedEmail === '' || trimmedPassword === '') return alert('All form fields must be filled in');
-    else console.log(trimmedEmail, trimmedPassword);
+    else {
+        user.email = trimmedEmail;
+        user.password = trimmedPassword;
+        console.log(user);
+    }
     event.target.reset();
 };
 

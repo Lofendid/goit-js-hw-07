@@ -130,7 +130,7 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.image {
+.gallery-item img {
   height: 300px;
 }
 
